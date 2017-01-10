@@ -1,4 +1,9 @@
-<div *ngFor="let photo of photos">
-  <img [src]="photo.thumbnailUrl" alt="" [routerLink]="[photo.id]">
+<div class="search-results"
+      infinite-scroll
+      [infiniteScrollDistance]="1"
+      [infiniteScrollThrottle]="300"
+      (scrolled)="onScrollDown()">
+  <div *ngFor="let photo of photos" infinite-scroll (scrolled)="onScrollDown()">
+    <img [src]="photo.thumbnailUrl" alt="" [routerLink]="[photo.id]">
+  </div>
 </div>
-

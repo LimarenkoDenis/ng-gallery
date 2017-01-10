@@ -15,12 +15,17 @@ export class PhotoListComponent implements OnInit {
     this._PhotoService = _PhotoService;
   }
 
-  ngOnInit() {
-    this._PhotoService.getPhotos()
-    .subscribe(
-      photos => this.photos = photos,
-      error => console.log(error)
-    );
+  public ngOnInit(): void {
+    this.getPhotos();
   }
 
+  public getPhotos() {
+    this._PhotoService.getPhotos()
+      .subscribe(
+        photos => this.photos = photos,
+        error => console.log(error)
+      );
+  }
+
+  onScrollDown() {}
 }

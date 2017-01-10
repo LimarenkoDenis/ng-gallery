@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { InfiniteScrollModule } from 'angular2-infinite-scroll';
 
 import { AppComponent } from './app.component';
 import { PhotoListComponent } from './photo-list/photo-list.component';
@@ -21,7 +22,8 @@ import { NoContentComponent } from './no-content/no-content.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRouting
+    AppRouting,
+    InfiniteScrollModule
   ],
   providers: [PhotoService],
   bootstrap: [AppComponent]
