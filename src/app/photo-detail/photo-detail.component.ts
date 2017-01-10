@@ -8,7 +8,7 @@ import { Location } from '@angular/common';
 @Component({
   selector: 'app-photo-detail',
   templateUrl: './photo-detail.component.html',
-  styleUrls: ['./photo-detail.component.css']
+  styleUrls: ['./photo-detail.component.sass']
 })
 export class PhotoDetailComponent implements OnInit {
 
